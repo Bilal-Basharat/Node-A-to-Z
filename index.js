@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
+
+const productRoutes = require('./routes/')
+
 const PORT = 4000;
 const bodyParser = require('body-parser');
 require('./utilis/db');
 
 app.use(bodyParser.json());
+
+app.use('/api', productRoutes);
 
 app.get('/', (req, res) => {
   res.send('Welcome to the website');

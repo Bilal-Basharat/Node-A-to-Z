@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const PORT = 4000;
+const bodyParser = require('body-parser');
+require('./utilis/db');
+
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.send('Welcome to the website');

@@ -1,0 +1,11 @@
+{
+  "name": "node-a-to-z",
+  "version": "1.0.0",
+  "description": "In this repository we will leawrn about Node.js from start to end. Also we will learn how to handle different errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

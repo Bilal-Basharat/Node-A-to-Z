@@ -4,8 +4,12 @@
   "description": "In this repository we will leawrn about Node.js from start to end. Also we will learn how to handle different errors",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Bilal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

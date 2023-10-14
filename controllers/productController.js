@@ -19,6 +19,7 @@ async function getAllProduct(req, res){
     }
 }
 
+//update a product by ID
 async function updateProduct(req, res){
     try{
         const { id } = req.params;
@@ -29,6 +30,17 @@ async function updateProduct(req, res){
     }
 }
 
+//delete a product by ID
+async function deleteProduct(){
+    try{
+        const { id } = req.params;
+        await Product.findByIdAndRemove(id);
+        res.sendStatus(404);
+    }catch(err){
+        res.status(500).json({error: err.message});
+    }
+}
+
 module.exports = {
-    createProduct,getAllProduct
+    createProduct,getAllProduct, createProduct
 }

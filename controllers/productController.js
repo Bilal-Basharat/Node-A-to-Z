@@ -18,6 +18,17 @@ async function getAllProduct(req, res){
         res.status(500).json({error: err.message});
     }
 }
+
+async function updateProduct(req, res){
+    try{
+        const { id } = req.params;
+        const updatedProduct = await Product.findByIdAndUpdate(id, req.body, {new: true});
+    res.json(updatedProduct) 
+    }catch(err){
+        res.status(500).json({error: err.message});
+    }
+}
+
 module.exports = {
     createProduct,getAllProduct
 }

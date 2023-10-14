@@ -35,12 +35,15 @@ async function deleteProduct(){
     try{
         const { id } = req.params;
         await Product.findByIdAndRemove(id);
-        res.sendStatus(404);
+        res.sendStatus(204);
     }catch(err){
         res.status(500).json({error: err.message});
     }
 }
 
 module.exports = {
-    createProduct,getAllProduct, createProduct
+    createProduct,
+    getAllProduct, 
+    updateProduct,
+    deleteProduct,
 }
